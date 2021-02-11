@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "401de20cd1700f98e6138f71323a4b73",
+    "revision": "6b8ab5e4b5f76f542a11cdecdb6b7468",
     "url": "/enjuonline/index.html"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/enjuonline/manifest.json"
   },
   {
-    "revision": "45f40fd73a9bc1f0f8e1",
+    "revision": "84c527b30725be79967a",
     "url": "/enjuonline/static/css/main.528b27e7.chunk.css"
   },
   {
-    "revision": "45f40fd73a9bc1f0f8e1",
-    "url": "/enjuonline/static/js/main.45f40fd7.chunk.js"
+    "revision": "84c527b30725be79967a",
+    "url": "/enjuonline/static/js/main.84c527b3.chunk.js"
   },
   {
     "revision": "a53626310b8741f9bb42",
