@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3799e5bf4c3e873a65a33cc013729c4e",
+    "revision": "e9b8af1e634acfba639c825239e31412",
     "url": "/enjuonline/index.html"
   },
   {
