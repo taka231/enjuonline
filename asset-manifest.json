@@ -1,14 +1,14 @@
 {
-  "main.css": "/my-app/static/css/main.528b27e7.chunk.css",
-  "main.js": "/my-app/static/js/main.07c55a5e.chunk.js",
-  "main.js.map": "/my-app/static/js/main.07c55a5e.chunk.js.map",
-  "runtime~main.js": "/my-app/static/js/runtime~main.194958df.js",
-  "runtime~main.js.map": "/my-app/static/js/runtime~main.194958df.js.map",
-  "vendors~main.js": "/my-app/static/js/vendors~main.0b49ec49.chunk.js",
-  "vendors~main.js.map": "/my-app/static/js/vendors~main.0b49ec49.chunk.js.map",
-  "./service-worker.js": "/my-app/./service-worker.js",
-  "index.html": "/my-app/index.html",
-  "logo.svg": "/my-app/logo.svg",
-  "manifest.json": "/my-app/manifest.json",
-  "precache-manifest.81e5c823ba773cbf198761ad4051f947.js": "/my-app/precache-manifest.81e5c823ba773cbf198761ad4051f947.js"
+  "main.css": "/enjuonline/static/css/main.528b27e7.chunk.css",
+  "main.js": "/enjuonline/static/js/main.45f40fd7.chunk.js",
+  "main.js.map": "/enjuonline/static/js/main.45f40fd7.chunk.js.map",
+  "runtime~main.js": "/enjuonline/static/js/runtime~main.a5362631.js",
+  "runtime~main.js.map": "/enjuonline/static/js/runtime~main.a5362631.js.map",
+  "vendors~main.js": "/enjuonline/static/js/vendors~main.0b49ec49.chunk.js",
+  "vendors~main.js.map": "/enjuonline/static/js/vendors~main.0b49ec49.chunk.js.map",
+  "./service-worker.js": "/enjuonline/./service-worker.js",
+  "index.html": "/enjuonline/index.html",
+  "logo.svg": "/enjuonline/logo.svg",
+  "manifest.json": "/enjuonline/manifest.json",
+  "precache-manifest.192329d63672a646ecb29bb4eddcb8da.js": "/enjuonline/precache-manifest.192329d63672a646ecb29bb4eddcb8da.js"
 }
