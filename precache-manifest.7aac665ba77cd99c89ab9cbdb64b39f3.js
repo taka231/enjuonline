@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9b8af1e634acfba639c825239e31412",
+    "revision": "f4b71cc006411c70ce844704ea051b59",
     "url": "/enjuonline/index.html"
   },
   {
@@ -12,19 +12,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/enjuonline/manifest.json"
   },
   {
-    "revision": "84c527b30725be79967a",
-    "url": "/enjuonline/static/css/main.528b27e7.chunk.css"
+    "revision": "5e947515497dff44d8ea",
+    "url": "/enjuonline/static/css/main.ef2ec330.chunk.css"
   },
   {
-    "revision": "84c527b30725be79967a",
-    "url": "/enjuonline/static/js/main.84c527b3.chunk.js"
+    "revision": "5e947515497dff44d8ea",
+    "url": "/enjuonline/static/js/main.5e947515.chunk.js"
   },
   {
     "revision": "a53626310b8741f9bb42",
     "url": "/enjuonline/static/js/runtime~main.a5362631.js"
   },
   {
-    "revision": "0b49ec49a892799f59f3",
-    "url": "/enjuonline/static/js/vendors~main.0b49ec49.chunk.js"
+    "revision": "b9063112a1dd4b93007d",
+    "url": "/enjuonline/static/js/vendors~main.b9063112.chunk.js"
   }
 ]);

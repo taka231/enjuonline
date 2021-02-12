@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/enjuonline/precache-manifest.24b9bc28c18593f096137a18938f19e6.js"
+  "/enjuonline/precache-manifest.7aac665ba77cd99c89ab9cbdb64b39f3.js"
 );
 
 workbox.core.skipWaiting();
