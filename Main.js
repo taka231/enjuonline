@@ -12725,6 +12725,8 @@ var $author$project$Main$viewAikotoba = function (model) {
 					$author$project$Main$belongingsButton(model))
 				])));
 };
+var $author$project$Main$NextStepButton = {$: 7};
+var $author$project$Main$PrebStepButton = {$: 8};
 var $author$project$Main$viewCafe = function (model) {
 	var sentence = function () {
 		var _v0 = model.c;
@@ -12753,11 +12755,11 @@ var $author$project$Main$viewCafe = function (model) {
 						[
 							A2(
 							$aforemny$material_components_web_elm$Material$Button$raised,
-							$author$project$Main$buttonConfig($author$project$Main$PrebPicture),
+							$author$project$Main$buttonConfig($author$project$Main$PrebStepButton),
 							'前へ'),
 							A2(
 							$aforemny$material_components_web_elm$Material$Button$raised,
-							$author$project$Main$buttonConfig($author$project$Main$NextPicture),
+							$author$project$Main$buttonConfig($author$project$Main$NextStepButton),
 							'次へ')
 						])),
 					A2(
@@ -12944,8 +12946,6 @@ var $author$project$Main$viewInMuseam = function (model) {
 						]))
 				])));
 };
-var $author$project$Main$NextStepButton = {$: 7};
-var $author$project$Main$PrebStepButton = {$: 8};
 var $author$project$Main$viewIntro = function (model) {
 	var sentence = function () {
 		var _v0 = model.c;
@@ -13238,7 +13238,7 @@ var $author$project$Main$viewTe = function (model) {
 			case 1:
 				return 'これがQ5だ。それからボスからの伝言も預かっている。';
 			case 2:
-				return 'それから階段広告と英語科研究室についてはすでに調べておいたぞ。俺は有能だからな。';
+				return 'それから階段広告と英語科研究室の謎についてはすでに調べておいたぞ。俺は有能だからな。';
 			case 3:
 				return '階段広告が「こんにちは」で、英語科研究室が「しぶやまくはり」だ。メモしておけよ。';
 			case 4:

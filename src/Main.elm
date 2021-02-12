@@ -82,6 +82,7 @@ type Msg
     | LockNumberInput String
     | NowDate Date.Date
     | Search
+    | GoTop
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -89,28 +90,28 @@ update msg model =
     case msg of
         NextStage ->
             if model.stage == 1 then
-                if model.mapInput == "モ" then
+                if model.mapInput == "モ" || model.mapInput == "も" then
                     ( { model | stage = model.stage + 1, step = 0, focus = Default, mapInput = "" }, Cmd.none )
 
                 else
                     ( model, Cmd.none )
 
             else if model.stage == 3 then
-                if model.mapInput == "ヤ" then
+                if model.mapInput == "ヤ" || model.mapInput == "や" then
                     ( { model | stage = model.stage + 1, step = 0, focus = Default, mapInput = "" }, Cmd.none )
 
                 else
                     ( model, Cmd.none )
 
             else if model.stage == 4 then
-                if model.mapInput == "テ" then
+                if model.mapInput == "ア" || model.mapInput == "あ" then
                     ( { model | stage = model.stage + 1, step = 0, focus = Default, mapInput = "" }, Cmd.none )
 
                 else
                     ( model, Cmd.none )
 
             else if model.stage == 6 then
-                if model.aikotobaInput == "せいしゅん" || model.aikotobaInput == "青春" then
+                if model.aikotobaInput == "せいしゅん" || model.aikotobaInput == "青春" || model.aikotobaInput == "セイシュン" then
                     ( { model | stage = model.stage + 1, step = 0, focus = Default, mapInput = "" }, Cmd.none )
 
                 else
@@ -274,6 +275,9 @@ update msg model =
         Search ->
             ( { model | searched = True }, Cmd.none )
 
+        GoTop ->
+            ( { model | step = 0, stage = 0 }, Cmd.none )
+
 
 
 ---- VIEW ----
@@ -436,7 +440,7 @@ viewItaru model =
                     "これがQ2です。どうぞ。"
 
                 2 ->
-                    "次のメンバーは、何か食べに行っているはずです。"
+                    "次のメンバーは、カフェテリアに食べに行っているはずです。"
 
                 _ ->
                     ""
@@ -445,9 +449,13 @@ viewItaru model =
         viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0105-e1606402081539.jpg"
             sentence
             [ div [] <|
-                [ raised (buttonConfig PrebStepButton) "前へ"
-                , raised (buttonConfig NextStepButton) "次へ"
-                ]
+                raised (buttonConfig PrebStepButton) "前へ"
+                    :: (if model.step <= 1 then
+                            [ raised (buttonConfig NextStepButton) "次へ" ]
+
+                        else
+                            []
+                       )
             , div [] <| belongingsButton model
             ]
 
@@ -461,18 +469,22 @@ viewCafe model =
                     "こんにちは。待っていました。Q3をどうぞ。"
 
                 1 ->
-                    "次のメンバーの位置は、Q4を解くとわかります。それでは。"
+                    "次のメンバーの位置は、Q4を解くとわかります。"
 
                 _ ->
-                    ""
+                    "それでは。"
     in
     div viewDivStyle <|
         viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/iOS-の画像-1-e1606468931405.jpg"
             sentence
             [ div [] <|
-                [ raised (buttonConfig PrebPicture) "前へ"
-                , raised (buttonConfig NextPicture) "次へ"
-                ]
+                raised (buttonConfig PrebStepButton) "前へ"
+                    :: (if model.step <= 1 then
+                            [ raised (buttonConfig NextStepButton) "次へ" ]
+
+                        else
+                            []
+                       )
             , div [] <| belongingsButton model
             ]
 
@@ -489,7 +501,7 @@ viewTe model =
                     "これがQ5だ。それからボスからの伝言も預かっている。"
 
                 2 ->
-                    "それから階段広告と英語科研究室についてはすでに調べておいたぞ。俺は有能だからな。"
+                    "それから階段広告と英語科研究室の謎についてはすでに調べておいたぞ。俺は有能だからな。"
 
                 3 ->
                     "階段広告が「こんにちは」で、英語科研究室が「しぶやまくはり」だ。メモしておけよ。"
@@ -504,9 +516,13 @@ viewTe model =
         viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0046-e1606472538273.jpg"
             sentence
             [ div [] <|
-                [ raised (buttonConfig PrebStepButton) "前へ"
-                , raised (buttonConfig NextStepButton) "次へ"
-                ]
+                raised (buttonConfig PrebStepButton) "前へ"
+                    :: (if model.step <= 4 then
+                            [ raised (buttonConfig NextStepButton) "次へ" ]
+
+                        else
+                            []
+                       )
             , div [] <| belongingsButton model
             ]
 
@@ -515,7 +531,7 @@ viewAikotoba : Model -> Html Msg
 viewAikotoba model =
     div viewDivStyle <|
         viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/hogehoge-e1606476240792.jpg"
-            "美術館に着いた。<あいことば>を伝え、美術館へ侵入せよ!"
+            "美術館に着いた。<あいことば>を伝え、美術館へ侵入せよ! \u{3000}\u{3000}\u{3000}メモ: 階段広告が「こんにちは」 英語科研究室が「しぶやまくはり」"
             [ div []
                 [ input [ placeholder "<あいことば>を入力", value model.aikotobaInput, Events.onInput AikotobaInput ] []
                 , raised (buttonConfig NextStage) "決定"
@@ -605,6 +621,8 @@ viewClear model =
                 , E.paddingXY 5 10
                 ]
                 [ E.el [ EF.size 25 ] <| E.text "クリアおめでとう!!" ]
+        , div [] <|
+            [ raised (buttonConfig GoTop) "トップへ" ]
         ]
 
 
