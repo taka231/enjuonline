@@ -347,7 +347,7 @@ view model =
 
 viewTitle : Model -> Html Msg
 viewTitle model =
-    div viewDivStyle <| viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/img23-e1606056552301.jpg" "" <| buttonTemplate NextStage "スタート"
+    div viewDivStyle <| viewTemplate "images/122企画紹介図.png" "" <| buttonTemplate NextStage "スタート"
 
 
 viewIntro : Model -> Html Msg
@@ -401,7 +401,7 @@ viewIntro model =
                     ""
 
         imgsrc =
-            "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0058-e1606308779660.jpg"
+            "images/IMG_0058.jpg"
     in
     div viewDivStyle <|
         viewTemplate imgsrc
@@ -417,11 +417,11 @@ viewIntro model =
 viewItaruAsk : Model -> Html Msg
 viewItaruAsk model =
     div viewDivStyle <|
-        viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0105-e1606402081539.jpg"
+        viewTemplate "images/IMG_0105.jpg"
             "話しかけよう"
             [ div []
                 [ raised (buttonConfig <| AskName "テツオさん") "テツオさん"
-                , raised (buttonConfig <| AskName "タカハシさん") "タカハシさん"
+                , raised (buttonConfig <| AskName "トシアキさん") "トシアキさん"
                 , raised (buttonConfig <| AskName "イタルさん") "イタルさん"
                 ]
             , div [] <| belongingsButton model
@@ -446,7 +446,7 @@ viewItaru model =
                     ""
     in
     div viewDivStyle <|
-        viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0105-e1606402081539.jpg"
+        viewTemplate "images/IMG_0105.jpg"
             sentence
             [ div [] <|
                 raised (buttonConfig PrebStepButton) "前へ"
@@ -513,7 +513,7 @@ viewTe model =
                     ""
     in
     div viewDivStyle <|
-        viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0046-e1606472538273.jpg"
+        viewTemplate "images/IMG_0046.jpg"
             sentence
             [ div [] <|
                 raised (buttonConfig PrebStepButton) "前へ"
@@ -530,7 +530,7 @@ viewTe model =
 viewAikotoba : Model -> Html Msg
 viewAikotoba model =
     div viewDivStyle <|
-        viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/hogehoge-e1606476240792.jpg"
+        viewTemplate "images/20201127194740.png"
             "美術館に着いた。<あいことば>を伝え、美術館へ侵入せよ! \u{3000}\u{3000}\u{3000}メモ: 階段広告が「こんにちは」 英語科研究室が「しぶやまくはり」"
             [ div []
                 [ input [ placeholder "<あいことば>を入力", value model.aikotobaInput, Events.onInput AikotobaInput ] []
@@ -546,25 +546,25 @@ viewInMuseam model =
         imgsrc =
             case model.picture of
                 0 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0063-e1606484016934.jpg"
+                    "images/IMG_0063.jpg"
 
                 1 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0065-e1606484044852.jpg"
+                    "images/IMG_0065.jpg"
 
                 2 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0067-e1606484075580.jpg"
+                    "images/IMG_0066.jpg"
 
                 3 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0066-e1606484089268.jpg"
+                    "images/IMG_0067.jpg"
 
                 4 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0068-e1606484108693.jpg"
+                    "images/IMG_0068.jpg"
 
                 5 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0069-e1606484133751.jpg"
+                    "images/IMG_0069.jpg"
 
                 6 ->
-                    "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/IMG_0070-e1606484152304.jpg"
+                    "images/IMG_0070.jpg"
 
                 _ ->
                     ""
@@ -628,22 +628,22 @@ viewClear model =
 
 viewQ1 : Model -> Html Msg
 viewQ1 model =
-    div viewDivStyle <| viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/2-Do╢e╗i╒-1_page-0004-e1606400532419.jpg" "" [ div [] <| belongingsButton model ]
+    div viewDivStyle <| viewTemplate "images/2-Dò╢ë╗ì╒-1_page-0004.jpg" "" [ div [] <| belongingsButton model ]
 
 
 viewQ2 : Model -> Html Msg
 viewQ2 model =
-    div viewDivStyle <| viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/2-D文化祭-2_page-0003-e1606404346174.jpg" "" [ div [] <| belongingsButton model ]
+    div viewDivStyle <| viewTemplate "images/2-D文化祭-2_page-0003.jpg" "" [ div [] <| belongingsButton model ]
 
 
 viewQ3 : Model -> Html Msg
 viewQ3 model =
-    div viewDivStyle <| viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/2-D文化祭-2_page-0003-1-e1606404392790.jpg" "" [ div [] <| belongingsButton model ]
+    div viewDivStyle <| viewTemplate "images/Q3.jpg" "" [ div [] <| belongingsButton model ]
 
 
 viewQ4 : Model -> Html Msg
 viewQ4 model =
-    div viewDivStyle <| viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/2-D文化祭-2_page-0007-1.jpg" "" [ div [] <| belongingsButton model ]
+    div viewDivStyle <| viewTemplate "images/2-D文化祭-2_page-0007.jpg" "" [ div [] <| belongingsButton model ]
 
 
 viewQ5 : Model -> Html Msg
@@ -654,7 +654,7 @@ viewQ5 model =
 viewMap : Model -> Html Msg
 viewMap model =
     div viewDivStyle <|
-        viewTemplate "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/img26-e1606219688612.jpg"
+        viewTemplate "images/img26.jpg"
             "移動先を入力して移動しよう"
             [ div []
                 [ input [ placeholder "移動先の記号を入力", value model.mapInput, Events.onInput MapInput ] []
@@ -672,7 +672,7 @@ viewCertificate model =
                 "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/2-D文化祭-2_page-0012.jpg"
 
             else
-                "https://enju2020.shibumaku.jp/wp-content/uploads/2020/11/615399_s-e1606491537448.jpg"
+                "images/615399_s.jpg"
     in
     div viewDivStyle <|
         viewTemplate imgsrc
@@ -705,8 +705,9 @@ viewTemplate : String -> String -> List (Html Msg) -> List (Html Msg)
 viewTemplate imgsrc sentence content =
     [ img
         [ src imgsrc
-        , style "max-width" "721px"
+        , style "max-width" "880px"
         , style "width" "100%"
+        , style "max-height" "800px"
         ]
         []
     , E.layout
